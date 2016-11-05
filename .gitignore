@@ -1,0 +1,19 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/spec/examples.txt
+/log/*.log
+/tmp
+
+vendor/ruby
+.idea
+*.iml
+
+dump.rdb
+node_modules
+/public/uploads/*
+/coverage
+
+/cache
+/doc
