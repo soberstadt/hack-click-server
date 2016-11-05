@@ -15,5 +15,6 @@ node_modules
 /public/uploads/*
 /coverage
 
+/vendor/bundle
 /cache
 /doc
