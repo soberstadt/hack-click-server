@@ -4,4 +4,6 @@ Rails.application.routes.draw do
 
   get 'dl/*content_path', to: 'deep_link#show'
   get 'deeplink/*content_path', to: 'deep_link#show'
+
+  get 'apple-app-site-association', to: 'app_site_association#index'
 end
