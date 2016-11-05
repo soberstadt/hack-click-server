@@ -17,6 +17,12 @@ class DeepLinkController < ApplicationController
 
     AppStoreReferral.create(application: app, device_id: device_id, path: content_path,
                             params: stored_params.to_h, referred_by_app: referrer_app)
+    ActionCable.server.broadcast 'messages',
+                                 {
+                                   content: 'redirected to app store',
+                                   app: { name: app.title },
+                                   device_id: device_id
+                                 }
 
     redirect_to app.install_link(platform)
   end
